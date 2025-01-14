@@ -19,9 +19,10 @@ import errorHandlerMiddleware from './middlewares/errorMiddleware';
 app.use(cors({
     origin: [
         "http://localhost:5173", // Development frontend
-        "https://omni-data-x.vercel.app/" // Replace with your production frontend URL
+        "https://omni-data-x.vercel.app" // Production frontend URL
     ],
-    credentials: true
+    methods: ["GET", "POST"], // Ensure GET and POST methods are allowed
+    credentials: true, // Allow cookies and credentials to be sent
 }));
 
 app.use(express.json());
