@@ -5,7 +5,7 @@ const app = express();
 dotenv.config();
 import connectDB from './database/configDB';
 connectDB(process.env.DB_URI!);
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 10000
 import teacherRouter from './routes/teacher.route';
 import errorHandlerMiddleware from './middlewares/errorMiddleware';
 
@@ -48,5 +48,5 @@ app.use(errorHandlerMiddleware); //<-- ErrorHandler middleware
 
 
 app.listen(PORT, () => {
-    console.log(`App is runnning at http://localhost:${PORT}`);
+    console.log('Server is running');
 });
