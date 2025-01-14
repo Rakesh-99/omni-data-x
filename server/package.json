@@ -1,0 +1,38 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Roxiler Systems ",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node index.js",
+    "dev": "nodemon index.ts",
+    "stage": "tsc && git status && git add .",
+    "postinstall": "npm run build"
+  },
+  "author": "Rakesh Kumar Parida",
+  "license": "ISC",
+  "dependencies": {
+    "@types/axios": "^0.9.36",
+    "@types/multer": "^1.4.12",
+    "axios": "^1.7.9",
+    "cloudinary": "^2.5.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^8.9.3",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^11.0.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^5.0.0",
+    "@types/mongoose": "^5.11.96",
+    "@types/node": "^22.10.5",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
